@@ -1,6 +1,6 @@
 Mars InSight Lastest Weather Report
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot1.png)
 
 Coding in progress, the software is not finish
 
