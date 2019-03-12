@@ -7,7 +7,8 @@
 ## What's this software ?  
 
 This python 3 software parse a json file and calcule the temperatures of Mars InSight. The Json file is updated everyday.
- 
+
+The data is downloaded from : https://mars.nasa.gov/insight/weather/
 
 ## What you need to make it work :  
 
