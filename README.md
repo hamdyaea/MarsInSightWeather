@@ -40,7 +40,8 @@ Linux only.
 
 This software make many OS commands that are only available in linux. 
 
-You user must have read and write access on the current running directory.
+Your user must have read and write access on the current running 
+directory.
 
 ## Developer - Author
 
