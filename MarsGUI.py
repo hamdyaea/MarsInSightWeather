@@ -6,6 +6,7 @@ from easygui import *
 import wget
 import json
 import os
+import sys
 
 def parser():
     with open('rawdata', 'r') as f:
@@ -35,11 +36,13 @@ def parser():
         sol_keys_new6 = sol_keys[-7]
         Last_temp6 = mars[sol_keys_new6]["AT"]
 
-        average_seven_min = (((Last_temp['mn'])+(Last_temp1['mn'])+(Last_temp2['mn'])+(Last_temp3['mn'])+(Last_temp4['mn'])+(Last_temp5['mn'])+(Last_temp6['mn']))/7)
+        average_seven_min = (((Last_temp['mn'])+(Last_temp1['mn'])+(Last_temp2['mn'])+(Last_temp3['mn'])\
+                              +(Last_temp4['mn'])+(Last_temp5['mn'])+(Last_temp6['mn']))/7)
         average_seven_min_reduced = round(average_seven_min,2)
 
 
-        average_seven_max = (((Last_temp['mx'])+(Last_temp1['mx'])+(Last_temp2['mx'])+(Last_temp3['mx'])+(Last_temp4['mx'])+(Last_temp5['mx'])+(Last_temp6['mx']))/7)
+        average_seven_max = (((Last_temp['mx'])+(Last_temp1['mx'])+(Last_temp2['mx'])+(Last_temp3['mx'])\
+                              +(Last_temp4['mx'])+(Last_temp5['mx'])+(Last_temp6['mx']))/7)
         average_seven_max_reduced = round(average_seven_max, 2)
 
         LastMin = Last_temp['mn']
@@ -53,7 +56,7 @@ def parser():
 
         welcome = "Mars InSight at Elysium Planitia latests weather report"
 
-        image = ("weather.png","mars.png")
+        image = ("weatherOK.png","mars.png")
         msg = ((welcome)+str("\nThe temperature is updated from Mars everyday\n\n\nLast sol for insight on Mars : ")\
                +str(sol_keys_new)+str("\n\nLast signal date : ")+str(last_date[:10])+str("\n\nLast signal time : ")\
                +str(last_date[-9:-1])+str(" UTC")+str("\n\nMinimum Temperature : ")+str(LastMinReduce)+str(" °C")\
@@ -64,7 +67,12 @@ def parser():
 
         choices = ["Ok"]
         reply = buttonbox(msg, image=image, choices=choices)
-
+        if reply == "Ok":
+            sys.exit(0)
+        elif reply == "weatherOK.png":
+            buttonbox(msg="Last Mars weather graph full size",image="weather.png",choices=["Close"])
+        elif reply == "mars.png":
+            buttonbox(msg="Insight on Mars",image="mars.png",choices=["Close"])
 
 filePath = "rawdata"
 
@@ -86,7 +94,7 @@ else:
 url1 = ("https://mars.nasa.gov/rss/api/images/insight_marsweather_white.png")
 filename1 = wget.download(url1,out="weather.png")
 
-cmd = "convert -resize 25%  weather.png weather.png"
+cmd = "convert -resize 25%  weather.png weatherOK.png"
 os.system(cmd)
 
 
