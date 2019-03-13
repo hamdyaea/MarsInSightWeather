@@ -19,31 +19,49 @@ def parser():
 
         sol_keys_new1 = sol_keys[-2]
         Last_temp1 = mars[sol_keys_new1]["AT"]
-        last_date1 = mars[sol_keys_new1]["First_UTC"]
 
         sol_keys_new2 = sol_keys[-3]
         Last_temp2 = mars[sol_keys_new2]["AT"]
-        last_date2 = mars[sol_keys_new2]["First_UTC"]
 
         sol_keys_new3 = sol_keys[-4]
         Last_temp3 = mars[sol_keys_new3]["AT"]
-        last_date3 = mars[sol_keys_new3]["First_UTC"]
 
         sol_keys_new4 = sol_keys[-5]
         Last_temp4 = mars[sol_keys_new4]["AT"]
-        last_date4 = mars[sol_keys_new4]["First_UTC"]
 
         sol_keys_new5 = sol_keys[-6]
         Last_temp5 = mars[sol_keys_new5]["AT"]
-        last_date5 = mars[sol_keys_new5]["First_UTC"]
 
         sol_keys_new6 = sol_keys[-7]
         Last_temp6 = mars[sol_keys_new6]["AT"]
-        last_date6 = mars[sol_keys_new6]["First_UTC"]
 
+        average_seven_min = (((Last_temp['mn'])+(Last_temp1['mn'])+(Last_temp2['mn'])+(Last_temp3['mn'])+(Last_temp4['mn'])+(Last_temp5['mn'])+(Last_temp6['mn']))/7)
+        average_seven_min_reduced = round(average_seven_min,2)
+
+
+        average_seven_max = (((Last_temp['mx'])+(Last_temp1['mx'])+(Last_temp2['mx'])+(Last_temp3['mx'])+(Last_temp4['mx'])+(Last_temp5['mx'])+(Last_temp6['mx']))/7)
+        average_seven_max_reduced = round(average_seven_max, 2)
+
+        LastMin = Last_temp['mn']
+        LastMinReduce = round(LastMin,2)
+
+        LastMax = Last_temp['mx']
+        LastMaxReduce = round(LastMax, 2)
+
+        LastAv = Last_temp['av']
+        LastAvReduce = round(LastAv, 2)
+
+        welcome = "Mars InSight at Elysium Planitia latests weather report"
 
         image = "weather.png"
-        msg = ((("Mars InSight at Elysium Planitia latests weather report \nThe temperature is updated from Mars everyday\n\n\nLast sol for insight on Mars : ")+str(sol_keys_new))+str(("\n\nLast signal date : ")+str(last_date[:10]))+str(("\n\nLast signal time : ")+str(last_date[-9:-1]))+str(("\n\nMinimum Temperature : ")+str(Last_temp['mn']))+str(" °C")+str(("\n\nMaximum Temperature : ") + str(Last_temp['mx']))+str(" °C")+str(("\n\nAverage Temperature : ") + str(Last_temp['av'])+str(" °C")+str(("\n\nAverage minimum temperature for the last 7 days : ")+str(((Last_temp['mn'])+(Last_temp1['mn'])+(Last_temp2['mn'])+(Last_temp3['mn'])+(Last_temp4['mn'])+(Last_temp5['mn'])+(Last_temp6['mn']))/7))+str(" °C")+str(("\n\nAverage maximum temperature for the last 7 days : ") + str(((Last_temp['mx']) + (Last_temp1['mx']) + (Last_temp2['mx']) + (Last_temp3['mx']) + (Last_temp4['mx']) + (Last_temp5['mx']) + (Last_temp6['mx'])) / 7)))+str(" °C")+("\n\nCurrent season on Mars : ")+str(ActuSeason))
+        msg = ((welcome)+str("\nThe temperature is updated from Mars everyday\n\n\nLast sol for insight on Mars : ")\
+               +str(sol_keys_new)+str("\n\nLast signal date : ")+str(last_date[:10])+str("\n\nLast signal time : ")\
+               +str(last_date[-9:-1])+str(" UTC")+str("\n\nMinimum Temperature : ")+str(LastMinReduce)+str(" °C")\
+               +str("\n\nMaximum Temperature : ") + str(LastMaxReduce)+str(" °C")+str("\n\nAverage Temperature : ")\
+               +str(LastAvReduce)+str(" °C")+str("\n\nAverage minimum temperature for the last 7 days : ")\
+               +str(average_seven_min_reduced)+str(" °C")+str("\n\nAverage maximum temperature for the last 7 days : ")\
+               +str(average_seven_max_reduced)+str(" °C")+("\n\nCurrent season on Mars : ")+str(ActuSeason))
+        
         choices = ["Ok"]
         reply = buttonbox(msg, image=image, choices=choices)
 
