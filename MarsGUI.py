@@ -53,7 +53,7 @@ def parser():
 
         welcome = "Mars InSight at Elysium Planitia latests weather report"
 
-        image = "weather.png"
+        image = ("weather.png","mars.png")
         msg = ((welcome)+str("\nThe temperature is updated from Mars everyday\n\n\nLast sol for insight on Mars : ")\
                +str(sol_keys_new)+str("\n\nLast signal date : ")+str(last_date[:10])+str("\n\nLast signal time : ")\
                +str(last_date[-9:-1])+str(" UTC")+str("\n\nMinimum Temperature : ")+str(LastMinReduce)+str(" °C")\
