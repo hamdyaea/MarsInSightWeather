@@ -2,7 +2,7 @@
 
 # Mars InSight Lastest Weather Report
 
-![Screenshot](screenshot3.png)
+![Screenshot](screenshot4.png)
 
 ## What's this software ?  
 

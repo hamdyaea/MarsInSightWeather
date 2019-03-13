@@ -60,8 +60,8 @@ def parser():
                +str("\n\nMaximum Temperature : ") + str(LastMaxReduce)+str(" °C")+str("\n\nAverage Temperature : ")\
                +str(LastAvReduce)+str(" °C")+str("\n\nAverage minimum temperature for the last 7 days : ")\
                +str(average_seven_min_reduced)+str(" °C")+str("\n\nAverage maximum temperature for the last 7 days : ")\
-               +str(average_seven_max_reduced)+str(" °C")+("\n\nCurrent season on Mars : ")+str(ActuSeason))
-        
+               +str(average_seven_max_reduced)+str(" °C")+("\n\nCurrent season on Mars : ")+str((ActuSeason).title()))
+
         choices = ["Ok"]
         reply = buttonbox(msg, image=image, choices=choices)
 
