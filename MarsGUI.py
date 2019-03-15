@@ -54,15 +54,21 @@ def parser():
         LastAv = Last_temp['av']
         LastAvReduce = round(LastAv, 2)
 
+        AverageSevenDays = (Last_temp['av']+Last_temp1['av']+Last_temp2['av']+Last_temp3['av']+Last_temp4['av']+Last_temp5['av']+Last_temp6['av'])/7
+        AverageSevenDaysReduce = round(AverageSevenDays,2)
+    
+
         welcome = "Mars InSight at Elysium Planitia latests weather report"
 
         image = ("weatherOK.png","mars.png")
-        msg = ((welcome)+str("\nThe temperature is updated from Mars everyday\n\n\nLast sol for insight on Mars : ")\
+        msg = ((welcome)+str("\nThe temperature is updated from Mars everyday\n\nLast sol for insight on Mars : ")\
                +str(sol_keys_new)+str("\n\nLast signal date : ")+str(last_date[:10])+str("\n\nLast signal time : ")\
                +str(last_date[-9:-1])+str(" UTC")+str("\n\nMinimum Temperature : ")+str(LastMinReduce)+str(" °C")\
                +str("\n\nMaximum Temperature : ") + str(LastMaxReduce)+str(" °C")+str("\n\nAverage Temperature : ")\
-               +str(LastAvReduce)+str(" °C")+str("\n\nAverage minimum temperature for the last 7 days : ")\
-               +str(average_seven_min_reduced)+str(" °C")+str("\n\nAverage maximum temperature for the last 7 days : ")\
+               +str(LastAvReduce)+str(" °C")+str("\n\nAverage temperature for the last 7 days : ")\
+               +str(AverageSevenDaysReduce)+str(" °C")\
+               +str("\n\nAverage minimum temperature for the last 7 days : ")+str(average_seven_min_reduced)+str(" °C")\
+               +str("\n\nAverage maximum temperature for the last 7 days : ")\
                +str(average_seven_max_reduced)+str(" °C")+("\n\nCurrent season on Mars : ")+str((ActuSeason).title()))
 
         choices = ["Ok"]
