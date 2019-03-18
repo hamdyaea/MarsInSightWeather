@@ -34,11 +34,9 @@ sudo pip3 install wget
 python3 MarsGUI.py
 ```  
 
-## Operating System :
+## Requirements :
 
-Linux only. 
-
-This software make many OS commands that are only available in linux. 
+If you miss a module, install it pip install module-name.
 
 Your user must have read and write access on the current running 
 directory.
