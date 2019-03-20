@@ -2,7 +2,7 @@
 
 # Mars InSight Lastest Weather Report
 
-![Screenshot](screenshot6.png)
+![Screenshot](screenshot7.png)
 
 ## What's this software ?  
 
@@ -36,7 +36,7 @@ python3 MarsGUI.py
 
 ## Requirements :
 
-If you miss a module, install it pip install module-name.
+If you miss a module, install it with the command pip install module-name. For example if you miss PIL you can install it with : sudo pip3 install pillow.
 
 Your user must have read and write access on the current running 
 directory.
