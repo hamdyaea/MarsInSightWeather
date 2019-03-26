@@ -41,6 +41,10 @@ If you miss a module, install it with the command pip install module-name. For e
 Your user must have read and write access on the current running 
 directory.
 
+## Error - No data :
+
+The average 7 days calculation need 7 days information. If the json file rawdata from insight contain less than 7 keys, No data is display for the average measurement.
+
 ## Developer - Author
 
 Hamdy Abou El Anein

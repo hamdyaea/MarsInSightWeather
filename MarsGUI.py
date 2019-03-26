@@ -2,6 +2,7 @@
 
 # Developer : Hamdy Abou El Anein
 
+
 from easygui import *
 import wget
 import json
@@ -18,32 +19,46 @@ def parser():
         Last_temp=mars[sol_keys_new]["AT"]
         last_date=mars[sol_keys_new]["First_UTC"]
 
-        sol_keys_new1 = sol_keys[-2]
-        Last_temp1 = mars[sol_keys_new1]["AT"]
 
-        sol_keys_new2 = sol_keys[-3]
-        Last_temp2 = mars[sol_keys_new2]["AT"]
+        if len(sol_keys) >= 7:
+            sol_keys_new1 = sol_keys[-2]
+            Last_temp1 = mars[sol_keys_new1]["AT"]
 
-        sol_keys_new3 = sol_keys[-4]
-        Last_temp3 = mars[sol_keys_new3]["AT"]
+            sol_keys_new2 = sol_keys[-3]
+            Last_temp2 = mars[sol_keys_new2]["AT"]
 
-        sol_keys_new4 = sol_keys[-5]
-        Last_temp4 = mars[sol_keys_new4]["AT"]
+            sol_keys_new3 = sol_keys[-4]
+            Last_temp3 = mars[sol_keys_new3]["AT"]
 
-        sol_keys_new5 = sol_keys[-6]
-        Last_temp5 = mars[sol_keys_new5]["AT"]
+            sol_keys_new4 = sol_keys[-5]
+            Last_temp4 = mars[sol_keys_new4]["AT"]
 
-        sol_keys_new6 = sol_keys[-7]
-        Last_temp6 = mars[sol_keys_new6]["AT"]
+            sol_keys_new5 = sol_keys[-6]
+            Last_temp5 = mars[sol_keys_new5]["AT"]
 
-        average_seven_min = (((Last_temp['mn'])+(Last_temp1['mn'])+(Last_temp2['mn'])+(Last_temp3['mn'])\
-                              +(Last_temp4['mn'])+(Last_temp5['mn'])+(Last_temp6['mn']))/7)
-        average_seven_min_reduced = round(average_seven_min,2)
+            sol_keys_new6 = sol_keys[-7]
+            Last_temp6 = mars[sol_keys_new6]["AT"]
+
+        if len(sol_keys) >= 7:
+            average_seven_min = (((Last_temp['mn'])+(Last_temp1['mn'])+(Last_temp2['mn'])+(Last_temp3['mn'])\
+                                  +(Last_temp4['mn'])+(Last_temp5['mn'])+(Last_temp6['mn']))/7)
+            average_seven_min_reduced = round(average_seven_min,2)
 
 
-        average_seven_max = (((Last_temp['mx'])+(Last_temp1['mx'])+(Last_temp2['mx'])+(Last_temp3['mx'])\
-                              +(Last_temp4['mx'])+(Last_temp5['mx'])+(Last_temp6['mx']))/7)
-        average_seven_max_reduced = round(average_seven_max, 2)
+            average_seven_max = (((Last_temp['mx'])+(Last_temp1['mx'])+(Last_temp2['mx'])+(Last_temp3['mx'])\
+                                  +(Last_temp4['mx'])+(Last_temp5['mx'])+(Last_temp6['mx']))/7)
+            average_seven_max_reduced = round(average_seven_max, 2)
+
+
+            AverageSevenDays = (Last_temp['av']+Last_temp1['av']+Last_temp2['av']+Last_temp3['av']+Last_temp4['av']+Last_temp5['av']+Last_temp6['av'])/7
+            AverageSevenDaysReduce = round(AverageSevenDays,2)
+
+        else:
+            average_seven_min_reduced = "No data"
+            average_seven_max_reduced = "No data"
+            AverageSevenDaysReduce = "No data"
+
+
 
         LastMin = Last_temp['mn']
         LastMinReduce = round(LastMin,2)
@@ -55,34 +70,42 @@ def parser():
         LastAvReduce = round(LastAv, 2)
 
 
-        AverageSevenDays = (Last_temp['av']+Last_temp1['av']+Last_temp2['av']+Last_temp3['av']+Last_temp4['av']+Last_temp5['av']+Last_temp6['av'])/7
-        AverageSevenDaysReduce = round(AverageSevenDays,2)
 
         # Wind speed
 
 
 
+        if ["HWS"] == True:
+            Last_Wnd = mars[sol_keys_new]["HWS"]
 
-        Last_Wnd = mars[sol_keys_new]["HWS"]
+            LastWindMin = (Last_Wnd['mn']*3.6)
+            LastWindMinReduce = round(LastWindMin, 2)
 
-        LastWindMin = (Last_Wnd['mn']*3.6)
-        LastWindMinReduce = round(LastWindMin, 2)
+            LastWindMax = (Last_Wnd['mx']*3.6)
+            LastWindMaxReduce = round(LastWindMax, 2)
 
-        LastWindMax = (Last_Wnd['mx']*3.6)
-        LastWindMaxReduce = round(LastWindMax, 2)
+            LastWindav = (Last_Wnd['av']*3.6)
+            LastWindavReduce = round(LastWindav, 2)
 
-        LastWindav = (Last_Wnd['av']*3.6)
-        LastWindavReduce = round(LastWindav, 2)
+            Last_Wnd1 = mars[sol_keys_new1]["HWS"]
+            Last_Wnd2 = mars[sol_keys_new2]["HWS"]
+            Last_Wnd3 = mars[sol_keys_new3]["HWS"]
+            Last_Wnd4 = mars[sol_keys_new4]["HWS"]
+            Last_Wnd5 = mars[sol_keys_new5]["HWS"]
+            Last_Wnd6 = mars[sol_keys_new6]["HWS"]
 
-        Last_Wnd1 = mars[sol_keys_new1]["HWS"]
-        Last_Wnd2 = mars[sol_keys_new2]["HWS"]
-        Last_Wnd3 = mars[sol_keys_new3]["HWS"]
-        Last_Wnd4 = mars[sol_keys_new4]["HWS"]
-        Last_Wnd5 = mars[sol_keys_new5]["HWS"]
-        Last_Wnd6 = mars[sol_keys_new6]["HWS"]
+        else:
+            LastWindMinReduce = "No data"
+            LastWindMaxReduce = "No data"
+            LastWindavReduce = "No data"
 
-        AverageSevenDaysWind = (Last_Wnd['av'] + Last_Wnd1['av'] + Last_Wnd2['av'] + Last_Wnd3['av'] + Last_Wnd4['av'] + Last_Wnd5['av'] + Last_Wnd6['av']) / 7
-        AverageSevenDaysWindReduce = round(AverageSevenDaysWind, 2)
+        if len(sol_keys) >= 7:
+
+            AverageSevenDaysWind = (Last_Wnd['av'] + Last_Wnd1['av'] + Last_Wnd2['av'] + Last_Wnd3['av'] + Last_Wnd4['av'] + Last_Wnd5['av'] + Last_Wnd6['av']) / 7
+            AverageSevenDaysWindReduce = round(AverageSevenDaysWind, 2)
+
+        else:
+            AverageSevenDaysWindReduce = "No data"
 
         # Pressure Atm
 
