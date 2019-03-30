@@ -10,6 +10,12 @@ This python 3 software parse a json file and calcule the temperatures of Mars In
 
 The data is downloaded from : https://mars.nasa.gov/insight/weather/
 
+## Download the Windows .exe version :
+
+You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
+
+[![Download Mars Insight Weather live](https://img.shields.io/sourceforge/dm/mars-insight-weather-live.svg)](https://sourceforge.net/projects/mars-insight-weather-live/files/latest/download)
+
 ## What you need to make it work :  
 
 The last version of Python 3.
