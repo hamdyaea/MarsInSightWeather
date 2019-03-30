@@ -43,8 +43,16 @@ directory.
 
 ## Error - No data :
 
-The average 7 days calculation need 7 days information. If the json file rawdata from insight contain less than 7 keys, No data is display for the average measurement.
+The average 7 days calculation need 7 days information. If the json file rawdata from insight contain less than 7 keys you will have an error like this :
 
+Traceback (most recent call last):
+  File "MarsGUI.py", line 161, in <module>
+    parser()
+  File "MarsGUI.py", line 86, in parser
+    Last_Wnd2 = mars[sol_keys_new2]["HWS"]
+KeyError: 'HWS'
+
+Look at the this page to see if all the 7 days data are available : https://mars.nasa.gov/insight/weather/
 ## Developer - Author
 
 Hamdy Abou El Anein
