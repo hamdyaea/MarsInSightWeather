@@ -2,7 +2,6 @@
 
 # Developer : Hamdy Abou El Anein
 
-
 from easygui import *
 import wget
 import json
@@ -75,7 +74,7 @@ def parser():
 
 
 
-        if ["HWS"] == True:
+        if mars[sol_keys_new]["HWS"] == True:
             Last_Wnd = mars[sol_keys_new]["HWS"]
 
             LastWindMin = (Last_Wnd['mn']*3.6)
@@ -94,18 +93,22 @@ def parser():
             Last_Wnd5 = mars[sol_keys_new5]["HWS"]
             Last_Wnd6 = mars[sol_keys_new6]["HWS"]
 
+            if len(sol_keys) >= 7:
+                AverageSevenDaysWind = (Last_Wnd['av'] + Last_Wnd1['av'] + Last_Wnd2['av'] + Last_Wnd3['av'] +
+                                        Last_Wnd4['av'] + Last_Wnd5['av'] + Last_Wnd6['av']) / 7
+                AverageSevenDaysWindReduce = round(AverageSevenDaysWind, 2)
+            else:
+                AverageSevenDaysWindReduce = "No data"
+
         else:
             LastWindMinReduce = "No data"
             LastWindMaxReduce = "No data"
             LastWindavReduce = "No data"
-
-        if len(sol_keys) >= 7:
-
-            AverageSevenDaysWind = (Last_Wnd['av'] + Last_Wnd1['av'] + Last_Wnd2['av'] + Last_Wnd3['av'] + Last_Wnd4['av'] + Last_Wnd5['av'] + Last_Wnd6['av']) / 7
-            AverageSevenDaysWindReduce = round(AverageSevenDaysWind, 2)
-
-        else:
             AverageSevenDaysWindReduce = "No data"
+
+
+
+
 
         # Pressure Atm
 
