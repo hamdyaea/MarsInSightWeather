@@ -15,6 +15,7 @@ The data is downloaded from : https://mars.nasa.gov/insight/weather/
 You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
 
 [![Download Mars Insight Weather live](https://img.shields.io/sourceforge/dm/mars-insight-weather-live.svg)](https://sourceforge.net/projects/mars-insight-weather-live/files/latest/download)
+[![Download Mars Insight Weather live](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/mars-insight-weather-live/files/latest/download)
 
 ## What you need to make it work :  
 
