@@ -18,6 +18,7 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
+
 class RoverInsight:
     def __init__(self):
         self.mars
@@ -106,7 +107,7 @@ def parser():
     try:
         RoverInsight.sol_keys_new1 = RoverInsight.sol_keys[-2]
         RoverInsight.Last_temp1 = RoverInsight.mars[RoverInsight.sol_keys_new1]["AT"]
-        logging.info(RoverInsight.sol_keys_new1 )
+        logging.info(RoverInsight.sol_keys_new1)
         logging.info(RoverInsight.Last_temp1)
     except:
         RoverInsight.sol_keys_new1 = 0
@@ -202,7 +203,7 @@ def parser():
         RoverInsight.AverageSevenDaysReduce = round(RoverInsight.AverageSevenDays, 2)
         logging.info(RoverInsight.average_seven_min)
         logging.info(RoverInsight.average_seven_max)
-        logging.info(RoverInsight.average_seven_max_reduced )
+        logging.info(RoverInsight.average_seven_max_reduced)
         logging.info(RoverInsight.AverageSevenDays)
     except:
         RoverInsight.average_seven_min_reduced = 0
