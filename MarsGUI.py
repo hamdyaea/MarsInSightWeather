@@ -9,7 +9,14 @@ import json
 import os
 import sys
 import urllib.request
+import logging
 
+logging.basicConfig(
+    filename="Mars.log",
+    level=logging.DEBUG,
+    format="%(asctime)s.%(msecs)03d %(levelname)s %(module)s - %(funcName)s: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
 
 class RoverInsight:
     def __init__(self):
@@ -78,61 +85,84 @@ def parser():
 
     try:
         RoverInsight.ActuSeason = RoverInsight.mars[RoverInsight.sol_keys_new]["Season"]
+        logging.info(RoverInsight.ActuSeason)
     except:
         RoverInsight.ActuSeason = "No data"
+        logging.warning("RoverInsight.ActuSeason = No data")
     try:
         RoverInsight.Last_temp = RoverInsight.mars[RoverInsight.sol_keys_new]["AT"]
+        logging.info(RoverInsight.Last_temp)
     except:
         RoverInsight.Last_temp = 0
+        logging.warning("RoverInsight.Last_temp = 0")
     try:
         RoverInsight.last_date = RoverInsight.mars[RoverInsight.sol_keys_new][
             "First_UTC"
         ]
+        logging.info(RoverInsight.last_date)
     except:
         RoverInsight.last_date = 0
-
+        logging.warning("RoverInsight.last_date = 0")
     try:
         RoverInsight.sol_keys_new1 = RoverInsight.sol_keys[-2]
         RoverInsight.Last_temp1 = RoverInsight.mars[RoverInsight.sol_keys_new1]["AT"]
+        logging.info(RoverInsight.sol_keys_new1 )
+        logging.info(RoverInsight.Last_temp1)
     except:
         RoverInsight.sol_keys_new1 = 0
         RoverInsight.Last_temp1 = 0
-
+        logging.warning("RoverInsight.sol_keys_new1 = 0")
+        logging.warning("RoverInsight.Last_temp1 = 0")
     try:
         RoverInsight.sol_keys_new2 = RoverInsight.sol_keys[-3]
         RoverInsight.Last_temp2 = RoverInsight.mars[RoverInsight.sol_keys_new2]["AT"]
+        logging.info(RoverInsight.sol_keys_new2)
+        logging.info(RoverInsight.Last_temp2)
     except:
         RoverInsight.sol_keys_new2 = 0
         RoverInsight.Last_temp2 = 0
-
+        logging.warning("RoverInsight.sol_keys_new2 = 0")
+        logging.warning("RoverInsight.Last_temp2 = 0")
     try:
         RoverInsight.sol_keys_new3 = RoverInsight.sol_keys[-4]
         RoverInsight.Last_temp3 = RoverInsight.mars[RoverInsight.sol_keys_new3]["AT"]
+        logging.info(RoverInsight.sol_keys_new3)
+        logging.info(RoverInsight.Last_temp3)
     except:
         RoverInsight.sol_keys_new3 = 0
         RoverInsight.Last_temp3 = 0
-
+        logging.warning("RoverInsight.sol_keys_new3 = 0")
+        logging.warning("RoverInsight.Last_temp3 = 0")
     try:
         RoverInsight.sol_keys_new4 = RoverInsight.sol_keys[-5]
         RoverInsight.Last_temp4 = RoverInsight.mars[RoverInsight.sol_keys_new4]["AT"]
+        logging.info(RoverInsight.sol_keys_new4)
+        logging.info(RoverInsight.Last_temp4)
     except:
         RoverInsight.sol_keys_new4 = 0
         RoverInsight.Last_temp4 = 0
-
+        logging.warning("RoverInsight.sol_keys_new4 = 0")
+        logging.warning("RoverInsight.Last_temp4 = 0")
     try:
         RoverInsight.sol_keys_new5 = RoverInsight.sol_keys[-6]
         RoverInsight.Last_temp5 = RoverInsight.mars[RoverInsight.sol_keys_new5]["AT"]
+        logging.info(RoverInsight.sol_keys_new5)
+        logging.info(RoverInsight.Last_temp5)
     except:
         RoverInsight.sol_keys_new5 = 0
         RoverInsight.Last_temp5 = 0
-
+        logging.warning("RoverInsight.sol_keys_new5 = 0")
+        logging.warning("RoverInsight.Last_temp5 = 0")
     try:
         RoverInsight.sol_keys_new6 = RoverInsight.sol_keys[-7]
         RoverInsight.Last_temp6 = RoverInsight.mars[RoverInsight.sol_keys_new6]["AT"]
+        logging.info(RoverInsight.sol_keys_new6)
+        logging.info(RoverInsight.Last_temp6)
     except:
         RoverInsight.sol_keys_new6 = 0
         RoverInsight.Last_temp6 = 0
-
+        logging.warning("RoverInsight.sol_keys_new6 = 0")
+        logging.warning("RoverInsight.Last_temp6 = 0")
     try:
         RoverInsight.average_seven_min = (
             (RoverInsight.Last_temp["mn"])
@@ -170,11 +200,17 @@ def parser():
             + RoverInsight.Last_temp6["av"]
         ) / 7
         RoverInsight.AverageSevenDaysReduce = round(RoverInsight.AverageSevenDays, 2)
+        logging.info(RoverInsight.average_seven_min)
+        logging.info(RoverInsight.average_seven_max)
+        logging.info(RoverInsight.average_seven_max_reduced )
+        logging.info(RoverInsight.AverageSevenDays)
     except:
         RoverInsight.average_seven_min_reduced = 0
         RoverInsight.average_seven_max_reduced = 0
         RoverInsight.AverageSevenDaysReduce = 0
-
+        logging.warning("RoverInsight.average_seven_min_reduced = 0")
+        logging.warning("RoverInsight.average_seven_max_reduced = 0")
+        logging.warning("RoverInsight.AverageSevenDaysReduce = 0")
     try:
         RoverInsight.LastMin = RoverInsight.Last_temp["mn"]
         RoverInsight.LastMinReduce = round(RoverInsight.LastMin, 2)
@@ -184,10 +220,16 @@ def parser():
 
         RoverInsight.LastAv = RoverInsight.Last_temp["av"]
         RoverInsight.LastAvReduce = round(RoverInsight.LastAv, 2)
+        logging.info(RoverInsight.LastMinReduce)
+        logging.info(RoverInsight.LastMaxReduce)
+        logging.info(RoverInsight.LastAvReduce)
     except:
         RoverInsight.LastMinReduce = 0
         RoverInsight.LastMaxReduce = 0
         RoverInsight.LastAvReduce = 0
+        logging.warning("RoverInsight.LastMinReduce = 0")
+        logging.warning("RoverInsight.LastMaxReduce = 0")
+        logging.warning("RoverInsight.LastAvReduce = 0")
 
     # Wind speed
 
@@ -202,35 +244,54 @@ def parser():
 
         RoverInsight.LastWindav = RoverInsight.Last_Wnd["av"] * 3.6
         RoverInsight.LastWindavReduce = round(RoverInsight.LastWindav, 2)
+        logging.info(RoverInsight.LastWindMinReduce)
+        logging.info(RoverInsight.LastWindMaxReduce)
+        logging.info(RoverInsight.LastWindavReduce)
     except:
         RoverInsight.LastWindMinReduce = 0
         RoverInsight.LastWindMaxReduce = 0
         RoverInsight.LastWindavReduce = 0
 
+        logging.warning("RoverInsight.LastWindMinReduce = 0")
+        logging.warning("RoverInsight.LastWindMaxReduce = 0")
+        logging.warning("RoverInsight.LastWindavReduce = 0")
+
     try:
         RoverInsight.Last_Wnd1 = RoverInsight.mars[RoverInsight.sol_keys_new1]["HWS"]
+        logging.info(RoverInsight.Last_Wnd1)
     except:
         RoverInsight.Last_Wnd1 = 0
+        logging.warning("RoverInsight.Last_Wnd1 = 0")
     try:
         RoverInsight.Last_Wnd2 = RoverInsight.mars[RoverInsight.sol_keys_new2]["HWS"]
+        logging.info(RoverInsight.Last_Wnd2)
     except:
         RoverInsight.Last_Wnd2 = 0
+        logging.warning("RoverInsight.Last_Wnd2 = 0")
     try:
         RoverInsight.Last_Wnd3 = RoverInsight.mars[RoverInsight.sol_keys_new3]["HWS"]
+        logging.info(RoverInsight.Last_Wnd3)
     except:
         RoverInsight.Last_Wnd3 = 0
+        logging.warning("RoverInsight.Last_Wnd3 = 0")
     try:
         RoverInsight.Last_Wnd4 = RoverInsight.mars[RoverInsight.sol_keys_new4]["HWS"]
+        logging.info(RoverInsight.Last_Wnd4)
     except:
         RoverInsight.Last_Wnd4 = 0
+        logging.warning("RoverInsight.Last_Wnd4 = 0")
     try:
         RoverInsight.Last_Wnd5 = RoverInsight.mars[RoverInsight.sol_keys_new5]["HWS"]
+        logging.info(RoverInsight.Last_Wnd5)
     except:
         RoverInsight.Last_Wnd5 = 0
+        logging.warning("RoverInsight.Last_Wnd5 = 0")
     try:
         RoverInsight.Last_Wnd6 = RoverInsight.mars[RoverInsight.sol_keys_new6]["HWS"]
+        logging.info(RoverInsight.Last_Wnd6)
     except:
         RoverInsight.Last_Wnd6 = 0
+        logging.warning("RoverInsight.Last_Wnd6 = 0")
 
     try:
         RoverInsight.AverageSevenDaysWind = (
@@ -245,8 +306,10 @@ def parser():
         RoverInsight.AverageSevenDaysWindReduce = round(
             RoverInsight.AverageSevenDaysWind, 2
         )
+        logging.info(RoverInsight.AverageSevenDaysWindReduce)
     except:
         RoverInsight.AverageSevenDaysWindReduce = 0
+        logging.warning("RoverInsight.AverageSevenDaysWindReduce = 0")
 
     # Pressure Atm
     try:
@@ -260,10 +323,16 @@ def parser():
 
         RoverInsight.LastPresav = RoverInsight.Last_Pres["av"]
         RoverInsight.LastPresavReduce = round(RoverInsight.LastPresav, 2)
+        logging.info(RoverInsight.LastPresMinReduce)
+        logging.info(RoverInsight.LastPresMaxReduce)
+        logging.info(RoverInsight.LastPresavReduce)
     except:
         RoverInsight.LastPresMinReduce = 0
         RoverInsight.LastPresMaxReduce = 0
         RoverInsight.LastPresavReduce = 0
+        logging.warning("RoverInsight.LastPresMinReduce = 0")
+        logging.warning("RoverInsight.LastPresMaxReduce = 0")
+        logging.warning("RoverInsight.LastPresavReduce = 0")
 
     # GUI creation
 
@@ -329,7 +398,7 @@ def parser():
         + ("\n\nCurrent season on Mars : ")
         + str((RoverInsight.ActuSeason).title())
     )
-
+    logging.info(RoverInsight.msg)
     choices = ["Ok"]
     reply = buttonbox(RoverInsight.msg, image=RoverInsight.image, choices=choices)
     if reply == "Ok":

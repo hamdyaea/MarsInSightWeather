@@ -1,0 +1,138 @@
+2019-12-04 19:24:09.378 INFO MarsGUI - parser: spring
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: {'av': -66.977, 'ct': 177470, 'mn': -98.548, 'mx': -21.174}
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: 2019-12-03T04:01:29Z
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: 361
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: {'av': -66.674, 'ct': 349640, 'mn': -98.159, 'mx': -21.206}
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: 360
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: {'av': -68.279, 'ct': 336590, 'mn': -100.147, 'mx': -20.635}
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: 359
+2019-12-04 19:24:09.379 INFO MarsGUI - parser: {'av': -61.241, 'ct': 251398, 'mn': -99.316, 'mx': -21.754}
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: 358
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: {'av': -68.422, 'ct': 191167, 'mn': -100.104, 'mx': -21.486}
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: 357
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: {'av': -65.178, 'ct': 311619, 'mn': -101.026, 'mx': -20.785}
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: 356
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: {'av': -63.5, 'ct': 219415, 'mn': -99.983, 'mx': -21.742}
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: -99.61185714285713
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: -21.25457142857143
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: -21.25
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: -65.753
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: -98.55
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: -21.17
+2019-12-04 19:24:09.380 INFO MarsGUI - parser: -66.98
+2019-12-04 19:24:09.380 WARNING MarsGUI - parser: RoverInsight.LastWindMinReduce = 0
+2019-12-04 19:24:09.381 WARNING MarsGUI - parser: RoverInsight.LastWindMaxReduce = 0
+2019-12-04 19:24:09.381 WARNING MarsGUI - parser: RoverInsight.LastWindavReduce = 0
+2019-12-04 19:24:09.381 INFO MarsGUI - parser: {'av': 5.308, 'ct': 149498, 'mn': 0.185, 'mx': 18.914}
+2019-12-04 19:24:09.381 INFO MarsGUI - parser: {'av': 4.925, 'ct': 122909, 'mn': 0.17800000000000002, 'mx': 19.939}
+2019-12-04 19:24:09.381 INFO MarsGUI - parser: {'av': 5.466, 'ct': 116105, 'mn': 0.177, 'mx': 23.261}
+2019-12-04 19:24:09.381 INFO MarsGUI - parser: {'av': 5.019, 'ct': 86253, 'mn': 0.17600000000000002, 'mx': 19.504}
+2019-12-04 19:24:09.381 INFO MarsGUI - parser: {'av': 5.375, 'ct': 138518, 'mn': 0.2, 'mx': 20.685}
+2019-12-04 19:24:09.381 INFO MarsGUI - parser: {'av': 5.235, 'ct': 100796, 'mn': 0.155, 'mx': 19.038}
+2019-12-04 19:24:09.381 WARNING MarsGUI - parser: RoverInsight.AverageSevenDaysWindReduce = 0
+2019-12-04 19:24:09.381 WARNING MarsGUI - parser: RoverInsight.LastPresMinReduce = 0
+2019-12-04 19:24:09.382 WARNING MarsGUI - parser: RoverInsight.LastPresMaxReduce = 0
+2019-12-04 19:24:09.382 WARNING MarsGUI - parser: RoverInsight.LastPresavReduce = 0
+2019-12-04 19:24:09.382 INFO MarsGUI - parser: Mars InSight at Elysium Planitia latests weather report
+The temperature is updated from Mars everyday
+
+Last sol for insight on Mars : 362          Minimum Wind Speed 0 km/h
+
+Last signal date : 2019-12-03               Maximum Wind Speed 0 km/h
+
+Last signal time : 04:01:29 UTC             Average Wind Speed 0 km/h
+
+Minimum Temperature : -98.55 °C             Average 7 days Wind Speed 0 km/h
+
+Maximum Temperature : -21.17 °C             Minimum Air Pressure 0 Pa
+
+Average Temperature : -66.98 °C             Maximum Air Pressure 0 Pa
+
+Average 7 days temperature : -65.75 °C           Average Air Pressure 0 Pa
+
+Average 7 days minimum temperature : -99.61 °C
+
+Average 7 days maximum temperature : -21.25 °C
+
+Current season on Mars : Spring
+2019-12-04 19:24:09.518 DEBUG PngImagePlugin - call: STREAM b'IHDR' 16 13
+2019-12-04 19:24:09.518 DEBUG PngImagePlugin - call: STREAM b'gAMA' 41 4
+2019-12-04 19:24:09.518 DEBUG PngImagePlugin - call: STREAM b'cHRM' 57 32
+2019-12-04 19:24:09.519 DEBUG PngImagePlugin - call: STREAM b'bKGD' 101 6
+2019-12-04 19:24:09.519 DEBUG PngImagePlugin - _open: b'bKGD' 101 6 (unknown)
+2019-12-04 19:24:09.519 DEBUG PngImagePlugin - call: STREAM b'pHYs' 119 9
+2019-12-04 19:24:09.519 DEBUG PngImagePlugin - call: STREAM b'tIME' 140 7
+2019-12-04 19:24:09.519 DEBUG PngImagePlugin - _open: b'tIME' 140 7 (unknown)
+2019-12-04 19:24:09.519 DEBUG PngImagePlugin - call: STREAM b'IDAT' 159 32768
+2019-12-04 19:24:09.526 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59572 37
+2019-12-04 19:24:09.526 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59621 37
+2019-12-04 19:24:09.526 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59670 57
+2019-12-04 19:24:57.546 INFO MarsGUI - parser: spring
+2019-12-04 19:24:57.546 INFO MarsGUI - parser: {'av': -66.977, 'ct': 177470, 'mn': -98.548, 'mx': -21.174}
+2019-12-04 19:24:57.546 INFO MarsGUI - parser: 2019-12-03T04:01:29Z
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: 361
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: {'av': -66.674, 'ct': 349640, 'mn': -98.159, 'mx': -21.206}
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: 360
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: {'av': -68.279, 'ct': 336590, 'mn': -100.147, 'mx': -20.635}
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: 359
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: {'av': -61.241, 'ct': 251398, 'mn': -99.316, 'mx': -21.754}
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: 358
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: {'av': -68.422, 'ct': 191167, 'mn': -100.104, 'mx': -21.486}
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: 357
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: {'av': -65.178, 'ct': 311619, 'mn': -101.026, 'mx': -20.785}
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: 356
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: {'av': -63.5, 'ct': 219415, 'mn': -99.983, 'mx': -21.742}
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: -99.61185714285713
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: -21.25457142857143
+2019-12-04 19:24:57.547 INFO MarsGUI - parser: -21.25
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: -65.753
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: -98.55
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: -21.17
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: -66.98
+2019-12-04 19:24:57.548 WARNING MarsGUI - parser: RoverInsight.LastWindMinReduce = 0
+2019-12-04 19:24:57.548 WARNING MarsGUI - parser: RoverInsight.LastWindMaxReduce = 0
+2019-12-04 19:24:57.548 WARNING MarsGUI - parser: RoverInsight.LastWindavReduce = 0
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: {'av': 5.308, 'ct': 149498, 'mn': 0.185, 'mx': 18.914}
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: {'av': 4.925, 'ct': 122909, 'mn': 0.17800000000000002, 'mx': 19.939}
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: {'av': 5.466, 'ct': 116105, 'mn': 0.177, 'mx': 23.261}
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: {'av': 5.019, 'ct': 86253, 'mn': 0.17600000000000002, 'mx': 19.504}
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: {'av': 5.375, 'ct': 138518, 'mn': 0.2, 'mx': 20.685}
+2019-12-04 19:24:57.548 INFO MarsGUI - parser: {'av': 5.235, 'ct': 100796, 'mn': 0.155, 'mx': 19.038}
+2019-12-04 19:24:57.548 WARNING MarsGUI - parser: RoverInsight.AverageSevenDaysWindReduce = 0
+2019-12-04 19:24:57.548 WARNING MarsGUI - parser: RoverInsight.LastPresMinReduce = 0
+2019-12-04 19:24:57.549 WARNING MarsGUI - parser: RoverInsight.LastPresMaxReduce = 0
+2019-12-04 19:24:57.549 WARNING MarsGUI - parser: RoverInsight.LastPresavReduce = 0
+2019-12-04 19:24:57.549 INFO MarsGUI - parser: Mars InSight at Elysium Planitia latests weather report
+The temperature is updated from Mars everyday
+
+Last sol for insight on Mars : 362          Minimum Wind Speed 0 km/h
+
+Last signal date : 2019-12-03               Maximum Wind Speed 0 km/h
+
+Last signal time : 04:01:29 UTC             Average Wind Speed 0 km/h
+
+Minimum Temperature : -98.55 °C             Average 7 days Wind Speed 0 km/h
+
+Maximum Temperature : -21.17 °C             Minimum Air Pressure 0 Pa
+
+Average Temperature : -66.98 °C             Maximum Air Pressure 0 Pa
+
+Average 7 days temperature : -65.75 °C           Average Air Pressure 0 Pa
+
+Average 7 days minimum temperature : -99.61 °C
+
+Average 7 days maximum temperature : -21.25 °C
+
+Current season on Mars : Spring
+2019-12-04 19:24:57.672 DEBUG PngImagePlugin - call: STREAM b'IHDR' 16 13
+2019-12-04 19:24:57.672 DEBUG PngImagePlugin - call: STREAM b'gAMA' 41 4
+2019-12-04 19:24:57.672 DEBUG PngImagePlugin - call: STREAM b'cHRM' 57 32
+2019-12-04 19:24:57.672 DEBUG PngImagePlugin - call: STREAM b'bKGD' 101 6
+2019-12-04 19:24:57.672 DEBUG PngImagePlugin - _open: b'bKGD' 101 6 (unknown)
+2019-12-04 19:24:57.672 DEBUG PngImagePlugin - call: STREAM b'pHYs' 119 9
+2019-12-04 19:24:57.673 DEBUG PngImagePlugin - call: STREAM b'tIME' 140 7
+2019-12-04 19:24:57.673 DEBUG PngImagePlugin - _open: b'tIME' 140 7 (unknown)
+2019-12-04 19:24:57.673 DEBUG PngImagePlugin - call: STREAM b'IDAT' 159 32768
+2019-12-04 19:24:57.677 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59572 37
+2019-12-04 19:24:57.677 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59621 37
+2019-12-04 19:24:57.677 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59670 57
