@@ -280,3 +280,72 @@ Current season on Mars : Spring
 2019-12-04 19:31:27.850 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59572 37
 2019-12-04 19:31:27.850 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59621 37
 2019-12-04 19:31:27.850 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59670 57
+2020-01-28 19:14:07.044 INFO MarsGUI - parser: summer
+2020-01-28 19:14:07.044 INFO MarsGUI - parser: {'av': -62.198, 'ct': 179254, 'mn': -95.061, 'mx': -14.304}
+2020-01-28 19:14:07.044 INFO MarsGUI - parser: 2020-01-26T14:59:38Z
+2020-01-28 19:14:07.044 INFO MarsGUI - parser: 414
+2020-01-28 19:14:07.044 INFO MarsGUI - parser: {'av': -62.603, 'ct': 177556, 'mn': -95.676, 'mx': -15.883}
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 413
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: {'av': -52.917, 'ct': 132010, 'mn': -86.783, 'mx': -15.965}
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 412
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: {'av': -63.841, 'ct': 222573, 'mn': -96.889, 'mx': -14.483}
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 411
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: {'av': -63.387, 'ct': 345562, 'mn': -96.357, 'mx': -16.701}
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 410
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: {'av': -68.223, 'ct': 235191, 'mn': -97.503, 'mx': -12.526}
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 409
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: {'av': -62.876, 'ct': 338688, 'mn': -98.64, 'mx': -15.385}
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: -95.2727142857143
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: -15.035285714285717
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: -15.04
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: -62.292142857142856
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: -95.06
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: -14.3
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: -62.2
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 0.87
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 74.69
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: 17.6
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: {'av': 4.829, 'ct': 81676, 'mn': 0.251, 'mx': 21.258000000000003}
+2020-01-28 19:14:07.045 INFO MarsGUI - parser: {'av': 5.555, 'ct': 55390, 'mn': 0.20800000000000002, 'mx': 19.764}
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: {'av': 5.488, 'ct': 100754, 'mn': 0.205, 'mx': 19.680999999999997}
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: {'av': 5.19, 'ct': 157831, 'mn': 0.23199999999999998, 'mx': 22.711}
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: {'av': 5.028, 'ct': 108604, 'mn': 0.20800000000000002, 'mx': 19.692}
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: {'av': 5.1, 'ct': 150323, 'mn': 0.17800000000000002, 'mx': 20.967}
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: 5.15
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: 609.37
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: 646.22
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: 630.81
+2020-01-28 19:14:07.046 INFO MarsGUI - parser: Mars InSight at Elysium Planitia latests weather report
+The temperature is updated from Mars everyday
+
+Last sol for insight on Mars : 415          Minimum Wind Speed 0.87 km/h
+
+Last signal date : 2020-01-26               Maximum Wind Speed 74.69 km/h
+
+Last signal time : 14:59:38 UTC             Average Wind Speed 17.6 km/h
+
+Minimum Temperature : -95.06 °C             Average 7 days Wind Speed 5.15 km/h
+
+Maximum Temperature : -14.3 °C             Minimum Air Pressure 609.37 Pa
+
+Average Temperature : -62.2 °C             Maximum Air Pressure 646.22 Pa
+
+Average 7 days temperature : -62.29 °C           Average Air Pressure 630.81 Pa
+
+Average 7 days minimum temperature : -95.27 °C
+
+Average 7 days maximum temperature : -15.04 °C
+
+Current season on Mars : Summer
+2020-01-28 19:14:07.247 DEBUG PngImagePlugin - call: STREAM b'IHDR' 16 13
+2020-01-28 19:14:07.247 DEBUG PngImagePlugin - call: STREAM b'gAMA' 41 4
+2020-01-28 19:14:07.247 DEBUG PngImagePlugin - call: STREAM b'cHRM' 57 32
+2020-01-28 19:14:07.247 DEBUG PngImagePlugin - call: STREAM b'bKGD' 101 6
+2020-01-28 19:14:07.247 DEBUG PngImagePlugin - _open: b'bKGD' 101 6 (unknown)
+2020-01-28 19:14:07.247 DEBUG PngImagePlugin - call: STREAM b'pHYs' 119 9
+2020-01-28 19:14:07.248 DEBUG PngImagePlugin - call: STREAM b'tIME' 140 7
+2020-01-28 19:14:07.248 DEBUG PngImagePlugin - _open: b'tIME' 140 7 (unknown)
+2020-01-28 19:14:07.248 DEBUG PngImagePlugin - call: STREAM b'IDAT' 159 32768
+2020-01-28 19:14:07.252 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59210 37
+2020-01-28 19:14:07.252 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59259 37
+2020-01-28 19:14:07.252 DEBUG PngImagePlugin - call: STREAM b'tEXt' 59308 57
