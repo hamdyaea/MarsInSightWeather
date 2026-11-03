@@ -1,69 +1,38 @@
-![Awesome](awesome.svg) ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg) ![Python](python.png)  
+# Mars InSight Weather — Historical Archive Viewer
 
-# Mars InSight Lastest Weather Report
+Developer: Hamdy Abou El Anein
+Contact: hamdy.aea@protonmail.com
+License: GNU GPL v3 (see LICENSE).
 
-![Screenshot](screenshot7.png)
+The NASA InSight lander completed its mission in **December 2022**.
+The original EasyGUI application attempted to fetch a live weather feed
+and downloaded/overwrote images in the repository. A live InSight
+weather feed is no longer available.
 
-## What's this software ?  
+This version is an **offline Tkinter archive viewer**. It displays
+the archived weather chart and InSight/Mars imagery already stored
+in the repository. It does not claim that these are current Mars
+conditions and makes no HTTP requests.
 
-This python 3 software parse a json file and calcule the temperatures of Mars InSight. The Json file is updated everyday.
-
-The data is downloaded from : https://mars.nasa.gov/insight/weather/
-
-## Download the Windows .exe version :
-
-You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
-
-[![Download Mars Insight Weather live](https://img.shields.io/sourceforge/dm/mars-insight-weather-live.svg)](https://sourceforge.net/projects/mars-insight-weather-live/files/latest/download)
-[![Download Mars Insight Weather live](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/mars-insight-weather-live/files/latest/download)
-
-## What you need to make it work :  
-
-The last version of Python 3.
-
-you also need to have the easygui library for python 3:
-
-At least the version 0.98
+## Run
 
 ```sh
-sudo python3 -m pip install --upgrade easygui 
-```
-You need wget for python 3:
-
-
-```sh
-sudo pip3 install wget
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+python MarsGUI.py
 ```
 
-## How to launch this software :  
+The original historical application and NASA API logic are preserved
+on branch `old`. The old `Mars.log` is retained as historical data
+but is no longer overwritten at startup.
+
+## Tests
 
 ```sh
-python3 MarsGUI.py
-```  
+python3 -m pytest -q
+```
 
-## Requirements :
-
-If you miss a module, install it with the command pip install module-name. For example if you miss PIL you can install it with : sudo pip3 install pillow.
-
-Your user must have read and write access on the current running 
-directory.
-
-## Error - No data :
-
-The average 7 days calculation need 7 days information. If the json file rawdata from insight contain less than 7 keys you will have an error like this :
-
-Traceback (most recent call last):
-  File "MarsGUI.py", line 161, in <module>
-    parser()
-  File "MarsGUI.py", line 86, in parser
-    Last_Wnd2 = mars[sol_keys_new2]["HWS"]
-KeyError: 'HWS'
-
-Look at the this page to see if all the 7 days data are available : https://mars.nasa.gov/insight/weather/
-## Developer - Author
-
-Hamdy Abou El Anein
-
-## Homepage
-
-http://www.daylightlinux.ch 
+Tests verify the local images can be read. The GUI was also launched
+on Manjaro. The archived NASA imagery may carry separate source
+attribution requirements; it is not newly relicensed by this rewrite.
